@@ -2,8 +2,8 @@
 
 
 <h3>BILLBOARD TOPS</h3>
-<% @artists.each do |artist| %>
-
-  <h2><%= link_to "#{artist.name}", artists_path(yep) %></h2>
+<% @charts.each do |chart| %>
+  <strong><%= chart.title %></strong>
+  <%= link_to "Show", chart_path(chart) %>
  
 <% end %>

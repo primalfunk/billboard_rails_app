@@ -1,9 +1,7 @@
 <h1>Charts#show</h1>
 
-
-<h1><%= @artist.name %></h1>
-<h4><%= @artist.genre %></h1>
-<%= link_to 'edit Page', edit_artists_path(@artist)%>
-<%= link_to 'Destroy', @artist, method: :delete%>
+<h1><%= @chart.title %></h1>
+<%= link_to 'Edit Page', edit_chart_path(@chart)%>
+<%= link_to 'Destroy', @chart, method: :delete %>
  <br/>
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Back', charts_path %>
