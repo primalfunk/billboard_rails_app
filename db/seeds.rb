@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+15.times do
+  genre = Faker::Music.instrument
+  title = "Top #{rand(1000)+100} #{genre} hits"
+  Chart.create(title: title)
+end
+
+50.times do
+  name = Faker::Science.scientist
+  genre = Faker::Pokemon.move
+  Artist.create(name: name, genre: genre)
+end
+
+i = 0
+Artist.all.each do
+  rand(20).times do
+    title = Faker::BossaNova.song
+    artist_id = i
+    length = rand(20).to_f
+    if rand(5) == 5
+      chart_id = rand(15)
+    else
+      chart_id = nil
+    end
+    Song.create(title: title, length: length, artist_id: artist_id, chart_id: chart_id)
+    i += 1
+  end
+end
