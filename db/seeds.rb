@@ -17,18 +17,15 @@ end
   Artist.create(name: name, genre: genre)
 end
 
-i = 0
+i = 1
+choice = 0
 Artist.all.each do
   rand(20).times do
     title = Faker::BossaNova.song
     artist_id = i
     length = rand(20).to_f
-    if rand(5) == 5
-      chart_id = rand(15)
-    else
-      chart_id = nil
-    end
+    chart_id = rand(15) + 1
     Song.create(title: title, length: length, artist_id: artist_id, chart_id: chart_id)
-    i += 1
   end
+  i += 1
 end

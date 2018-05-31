@@ -1,10 +1,13 @@
-<h1>show </h1>
+<h1>Show </h1>
 
+<h1>Artist: <%= @artist.name %></h1>
+<h4>Genre: <%= @artist.genre %></h1>
 
+<% @artist.songs.each do |song| %>
+  <%= render 'songs/song', { song: song } %>
+<% end %>
 
-<h1><%= @artist.name %></h1>
-<h4><%= @artist.genre %></h1>
-<%= link_to 'edit Page', edit_artists_path(@artist)%>
+<%= link_to 'Edit Artist', edit_artist_path(@artist)%>
 <%= link_to 'Destroy', @artist, method: :delete%>
  <br/>
 <%= link_to 'Back', artists_path %>
