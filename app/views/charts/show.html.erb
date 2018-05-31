@@ -1,12 +1,12 @@
-<h1>Charts#show</h1>
-
 <h1><%= @chart.title %></h1>
+
+<%= link_to 'Back', charts_path %>
+
 
 <% @chart.songs.each do |song| %>
   <%= render 'songs/song', { song: song } %>
 <% end %>
 
-<%= link_to 'Edit Page', edit_chart_path(@chart)%>
 <%= link_to 'Destroy', @chart, method: :delete %>
 <br />
 <%= link_to 'Back', charts_path %>

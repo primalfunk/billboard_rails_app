@@ -1,10 +1,9 @@
-<h1>Charts#index</h1>
-
+<h1>Charts</h1>
+<%= link_to 'Artist Index', artists_path %>
 <h3>BILLBOARD TOPS</h3>
+<hr />
 <% @charts.each do |chart| %>
   <strong><%= chart.title %></strong>
   <%= link_to "Show", chart_path(chart) %>
  
 <% end %>
-
-<%= link_to 'Artist Index', artists_path %>
