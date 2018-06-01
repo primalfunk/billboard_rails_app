@@ -1,4 +1,8 @@
 class ArtistsController < ApplicationController
+  protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_user!
+
   before_action :set_artist, only: [:show, :update, :edit, :destroy]
 
   def index
@@ -47,4 +51,8 @@ class ArtistsController < ApplicationController
     def artist_params
       params.require(:artist).permit(:name, :genre)
     end
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+   end
 end

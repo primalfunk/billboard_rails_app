@@ -11,7 +11,7 @@ class ChartsController < ApplicationController
   def new
     @chart = Chart.new
   end
-
+  
   def edit
   end
 
