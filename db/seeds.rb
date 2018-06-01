@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 15.times do
   genre = Faker::Music.instrument
-  title = "Top #{rand(1000)+100} #{genre} hits"
+  title = "Top #{rand(1000)+100} #{genre} Hits"
   Chart.create(title: title)
 end
 
