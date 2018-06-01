@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-chart_counts = ['10', '50', '100', '1000']
+chart_counts = ['5', '10', '50', '100']
 query_counts = []
 i = 0
 c = ""
