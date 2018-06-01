@@ -19,7 +19,7 @@ end
 
 20.times do
   name = Faker::Science.scientist
-  genre = Faker::Pokemon.move + 'Music'
+  genre = Faker::Pokemon.move + ' Music'
   Artist.create(name: name, genre: genre)
 end
 
