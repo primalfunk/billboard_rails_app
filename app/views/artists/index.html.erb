@@ -1,9 +1,8 @@
-<h1>Artists</h1>
-<h3>BILLBOARD TOPS</h3>
-<%= link_to 'Back to Charts', charts_path %>
+<h1>Artists Index</h1>
+<%= link_to 'Back to Charts', charts_path %> | <%= link_to 'Create New Artist', new_artist_path %>
+<hr />
+<br />
 <% @artists.each do |artist| %>
-
-  <h2><%= link_to "#{artist.name}", artist_path(artist) %></h2>
- 
+<p><strong><%= link_to "#{artist.name}", artist_path(artist) %></strong> - <%= link_to 'Edit Artist', edit_artist_path(artist) %> - <%= link_to 'Delete Artist', artist, method: :delete %></p>
 <% end %>
 <%= link_to 'Back to Charts', charts_path %>

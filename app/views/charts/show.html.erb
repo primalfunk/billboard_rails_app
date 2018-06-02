@@ -3,7 +3,5 @@
 <% @chart.songs.each do |song| %>
   <%= render 'songs/song', { song: song } %>
 <% end %>
-
-<%= link_to 'Destroy', @chart, method: :delete %>
 <br />
 <%= link_to 'Back', charts_path %>

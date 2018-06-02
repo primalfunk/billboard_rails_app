@@ -4,7 +4,9 @@
 <hr />
 <div class="chartslist">
   <% @charts.each do |chart| %>
-    <p><%= chart.title %> - <%= link_to "Show", chart_path(chart) %></p>
+    <p><%= chart.title %> - <%= link_to "Show", chart_path(chart) %>
+    <%= link_to "Edit", edit_chart_path(chart) %>
+    <%= link_to "Delete", chart, method: :delete %>
     <br />
   <% end %>
 </div>
